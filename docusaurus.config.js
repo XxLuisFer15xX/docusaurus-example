@@ -53,6 +53,18 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "modulo-x",
+        path: "modulo-x",
+        routeBasePath: "modulo-x",
+        sidebarPath: require.resolve("./sidebarsModuloX.js"),
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -72,6 +84,11 @@ const config = {
             label: "Tutorial",
           },
           {
+            to: "/modulo-x/intro",
+            label: "Módulo X",
+            position: "left",
+          },
+          {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
             position: "right",
@@ -87,6 +104,10 @@ const config = {
               {
                 label: "Tutorial",
                 to: "/docs/intro",
+              },
+              {
+                label: "Módulo X",
+                to: "/modulo-x/intro",
               },
             ],
           },
